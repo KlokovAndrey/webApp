@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Найдено</h1>
+<form action="#" th:action="@{/greeting}" th:object="${person}" method="get">
+    <p>Фамилия: <input type="text" th:field="*{secondName}" /></p>
+    <p>Имя: <input type="text" th:field="*{firstName}" /></p>
+    <p>Отчество: <input type="text" th:field="*{thirdName}" /></p>
+    <p>Возраст: <input type="text" th:field="*{age}" /></p>
+    <p>Уровень зарплаты: <input type="text" th:field="*{salary}" /></p>
+    <p>Адрес электронной почты: <input type="text" th:field="*{email}" /></p>
+    <p>Место работы: <input type="text" th:field="*{placeWork}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+</body>
+</html>
