@@ -8,12 +8,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class PersonController {
+public class GreetingController {
 
-        @GetMapping("/add")
-    public String personForm(@ModelAttribute Person person, Model model) {
-        //model.addAttribute("greeting", person);
-        person.writeToFile();
-        return "add";
+    @GetMapping("/greeting")
+    public String greetingForm(@ModelAttribute Person person, Model model) {
+        return "greeting";
     }
 }
