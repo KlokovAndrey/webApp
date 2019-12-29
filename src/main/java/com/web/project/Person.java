@@ -1,5 +1,7 @@
 package com.web.project;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -7,12 +9,14 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class Person {
-
+    @NotNull(message = "Name cannot be null")
     private String firstName = "";
+    @NotNull(message = "Name cannot be null")
     private String secondName = "";
     private String thirdName;
     private int age;
     private int salary;
+    @Email(message = "Email should be valid")
     private String email;
     private String placeWork;
 

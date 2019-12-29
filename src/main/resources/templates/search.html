@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Поиск</h1>
-<form action="#" th:action="@{/search}" th:object="${person}" method="get">
+<form action="#" th:action="@{/search}" th:object="${person}" method="post">
     <p>Фамилия: <input type="text" th:field="*{secondName}" /></p>
     <p>Имя: <input type="text" th:field="*{firstName}" /></p>
     <p><input type="submit" value="Search" /> <input type="reset" value="Reset" /></p>

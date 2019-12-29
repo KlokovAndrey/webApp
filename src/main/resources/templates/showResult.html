@@ -14,7 +14,8 @@
     <p>Уровень зарплаты: <input type="text" th:field="*{salary}" /></p>
     <p>Адрес электронной почты: <input type="text" th:field="*{email}" /></p>
     <p>Место работы: <input type="text" th:field="*{placeWork}" /></p>
-    <!--<input type="button" value="Отправить письмо" onClick='location.href= sendMail.html '>-->
+    <p><h8 th:class="btn1" th:text="${time}" ></h8></p>
+    <p><h8 th:class="btn1" th:text="'User Agent: ' + ${userAgent}"></h8></p>
     <p><a href="sendMail">Отправить письмо</a></p>
 </form>
 </body>

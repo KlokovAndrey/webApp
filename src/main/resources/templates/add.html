@@ -6,13 +6,13 @@
 </head>
 <body>
 <h1>Добавить</h1>
-<form action="#" th:action="@{/add}" th:object="${person}" method="get">
-    <p>Фамилия: <input type="text" th:field="*{secondName}" /></p>
-    <p>Имя: <input type="text" th:field="*{firstName}" /></p>
+<form action="#" th:action="@{/add}" th:object="${person}" method="post">
+    <p>Фамилия: <input type="text" th:field="*{secondName}" class="form-control"/></p>
+    <p>Имя: <input type="text" th:field="*{firstName}" class="form-control"/></p>
     <p>Отчество: <input type="text" th:field="*{thirdName}" /></p>
     <p>Возраст: <input type="number" th:field="*{age}" /></p>
     <p>Зарплата: <input type="number" th:field="*{salary}" /></p>
-    <p>Адрес электронной почты: <input type="text" th:field="*{email}" /></p>
+    <p>Адрес электронной почты: <input type="text" th:field="*{email}" class="form-control"/></p>
     <p>Место работы: <input type="text" th:field="*{placeWork}" /></p>
     <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
 </form>

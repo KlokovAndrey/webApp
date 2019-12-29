@@ -32,7 +32,6 @@ public class Mail {
         try {
             String pass= "java12345";
 
-
             Properties props = new Properties();
             props.put("mail.smtp.auth", "true");
             props.put("mail.smtp.starttls.enable", "true");

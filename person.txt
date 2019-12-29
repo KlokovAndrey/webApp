@@ -13,7 +13,7 @@ andy.klokov@yandex.ru
 Николаевич
 21
 3000
-pkuguvalov@mail.ru
+pkuguvalov@gmail.ru
 Тинькофф
 
 ИльяПригодич
@@ -24,4 +24,14 @@ pkuguvalov@mail.ru
 5000
 il.prigodich@yandex.ru
 Студенческий Совет ННГУ
+
+ВсеволодЕфремов
+Ефремов
+Всеволод
+Вячеславович
+20
+40000
+seva.efremov@yandex.ru
+Тинькофф
+
 
