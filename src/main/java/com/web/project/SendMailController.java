@@ -13,7 +13,7 @@ import java.io.IOException;
 @Controller
 public class SendMailController {
 
-    @GetMapping("/sendMail")
+    @PostMapping("/sendMail")
     public String sendMailForm(@ModelAttribute  Mail mail, Model model) {
         String str = "";
         try {

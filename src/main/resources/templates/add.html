@@ -7,14 +7,35 @@
 <body>
 <h1>Добавить</h1>
 <form action="#" th:action="@{/add}" th:object="${person}" method="post">
-    <p>Фамилия: <input type="text" th:field="*{secondName}" class="form-control"/></p>
-    <p>Имя: <input type="text" th:field="*{firstName}" class="form-control"/></p>
-    <p>Отчество: <input type="text" th:field="*{thirdName}" /></p>
-    <p>Возраст: <input type="number" th:field="*{age}" /></p>
-    <p>Зарплата: <input type="number" th:field="*{salary}" /></p>
-    <p>Адрес электронной почты: <input type="text" th:field="*{email}" class="form-control"/></p>
-    <p>Место работы: <input type="text" th:field="*{placeWork}" /></p>
-    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    <table>
+        <tr>
+            <td>Фамилия: <input type="text" th:field="*{secondName}" class="form-control"/></td>
+            <td th:if="${#fields.hasErrors('secondName')}" th:errors="*{secondName}">Wrong data</td>
+        </tr>
+        <tr>
+            <td>Имя: <input type="text" th:field="*{firstName}" class="form-control"/></td>
+            <td th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">Wrong data</td>
+        </tr>
+        <tr>
+            <td>Отчество: <input type="text" th:field="*{thirdName}" /></td>
+        </tr>
+        <tr>
+            <td>Возраст: <input type="number" th:field="*{age}" /></td>
+        </tr>
+        <tr>
+            <td>Адрес электронной почты: <input type="text" th:field="*{email}" class="form-control"/></td>
+            <td th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Wrong email</td>
+        </tr>
+        <tr>
+            <td>Зарплата: <input type="number" th:field="*{salary}" /></td>
+        </tr>
+        <tr>
+            <td>Место работы: <input type="text" th:field="*{placeWork}" /></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></td>
+        </tr>
+    </table>
 </form>
 </body>
 </html>

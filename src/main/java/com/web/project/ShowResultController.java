@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class ShowResultController {
 
-    @GetMapping("/showResult")
+    @PostMapping("/showResult")
     public String showResultForm(@ModelAttribute Person person,@ModelAttribute Mail mail, Model model) {
         mail.setEmail(person.getEmail());
         mail.setText("");

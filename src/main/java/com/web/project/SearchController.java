@@ -23,7 +23,8 @@ public class SearchController {
 
     @PostMapping("/search")
     public String showForm(@ModelAttribute Person person, Model model, HttpServletRequest request) {
-        if (!person.search()) return "error";
+        if (!person.search())
+            if(!person.searchUpload()) return "error";
         String userAgent = request.getHeader("User-Agent");
         String time="Time: " + new Date();
         model.addAttribute("time", time);

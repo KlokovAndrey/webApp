@@ -6,7 +6,7 @@
 </head>
 <h1>Отправить письмо</h1>
 <body>
-<form action="#" th:action="@{/sendMail}" th:object="${mail}" method="get">
+<form action="#" th:action="@{/sendMail}" th:object="${mail}" method="post">
     <p>Адрес: <input type="text" th:field="*{email}" /></p>
     <p>Текст письма: <input type="text" th:field="*{text}" /></p>
     <p><input type="submit" value="Send" /> </p>

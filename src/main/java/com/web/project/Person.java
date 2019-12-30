@@ -9,15 +9,20 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class Person {
-    @NotNull(message = "Name cannot be null")
+
+    @NotNull
     private String firstName = "";
-    @NotNull(message = "Name cannot be null")
+
+    @NotNull
     private String secondName = "";
+
     private String thirdName;
     private int age;
     private int salary;
-    @Email(message = "Email should be valid")
+
+    @Email
     private String email;
+
     private String placeWork;
 
     public void writeToFile(){
@@ -68,35 +73,34 @@ public class Person {
         return false;
     }
 
-//    public boolean search() {
-//        try (FileReader reader = new FileReader("person.txt")) {
-//            char[] buf = new char[256];
-//            int c;
-//            String str = firstName + secondName;
-//            while (buf != str.toCharArray()) {
-//                while ((c = reader.read(buf)) > 0) {
-//
-//                    if (c < 256) {
-//                        buf = Arrays.copyOf(buf, c);
-//                    }
-//                }
-//            }
-//            str = "]";
-//            while (buf != str.toCharArray()) {
-//
-//                while ((c = reader.read(buf)) > 0) {
-//
-//                    if (c < 256) {
-//                        buf = Arrays.copyOf(buf, c);
-//                    }
-//                }
-//            }
-//
-//        } catch (IOException ex) {
-//
-//            System.out.println(ex.getMessage());
-//        }
-//    }
+    public boolean searchUpload() {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader("D:\\Java tasks\\upload\\externalFile"));
+            String line;
+            boolean flag = false;
+            String str = firstName+secondName;
+            while ((line = reader.readLine()) != null) {
+                if(line.equals(str)){
+                    flag = true;
+                    break;
+                }
+            }
+            if(!flag) return false;
+            reader.readLine();
+            reader.readLine();
+            thirdName = reader.readLine();
+            age = Integer.parseInt(reader.readLine());
+            salary = Integer.parseInt(reader.readLine());
+            email = reader.readLine();
+            placeWork = reader.readLine();
+            return true;
+        }
+        catch (IOException ex){
+            return false;
+        }
+    }
+
+
 
     public String getFirstName() {
         return firstName;
